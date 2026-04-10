@@ -1,11 +1,5 @@
 using Godot;
 
-/// <summary>
-/// MainMenuScript.cs — Wires the Play Game button to load the game scene.
-///
-/// Place this script at res://scripts/MainMenuScript.cs
-/// Change GameScenePath if your main scene is at a different path.
-/// </summary>
 public partial class MainMenuScript : Control
 {
     [Export] public string GameScenePath = "res://Main.tscn";
