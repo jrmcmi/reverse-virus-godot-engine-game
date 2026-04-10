@@ -1,14 +1,6 @@
 using Godot;
 using System.Collections.Generic;
 
-/// <summary>
-/// AudioManager.cs — Fixed zombie sound spam with per-zombie interval throttle.
-///
-/// FIX: Each zombie audio player now has a PlayInterval (seconds).
-/// Once the zombie sound plays, it won't play again until PlayInterval elapses.
-/// This prevents 20 zombies from all playing simultaneously every frame.
-/// ZombiePlayInterval is exported so you can tune it in the Inspector.
-/// </summary>
 public partial class AudioManager : Node
 {
     public static AudioManager Instance { get; private set; }
