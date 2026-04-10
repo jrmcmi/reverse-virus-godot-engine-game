@@ -1,0 +1,245 @@
+[gd_scene format=3 uid="uid://chlum5nm4alck"]
+
+[ext_resource type="Script" uid="uid://cnbgpk0lgcja6" path="res://scripts/GameManager.cs" id="1_gm"]
+[ext_resource type="Texture2D" uid="uid://b3aq73b8x3flp" path="res://PNG/grass_lands.png" id="2_wkp8b"]
+[ext_resource type="PackedScene" uid="uid://bqrcnve4804xn" path="res://objects/appleTree.tscn" id="4_fos0i"]
+[ext_resource type="PackedScene" uid="uid://bqubsjrm4myqp" path="res://objects/bigTree.tscn" id="5_fos0i"]
+[ext_resource type="PackedScene" uid="uid://cgib3v83oaguk" path="res://objects/regularTree.tscn" id="6_3dxm6"]
+[ext_resource type="PackedScene" uid="uid://bfn310mobb2yn" path="res://objects/rocks.tscn" id="7_lgr22"]
+[ext_resource type="PackedScene" uid="uid://0j4alaw1mw7q" path="res://objects/bush.tscn" id="9_03owx"]
+[ext_resource type="PackedScene" uid="uid://dkoryoi3wh7b1" path="res://objects/stump.tscn" id="10_wkp8b"]
+
+[sub_resource type="RectangleShape2D" id="RS_wall_top"]
+size = Vector2(1920, 16)
+
+[sub_resource type="RectangleShape2D" id="RS_wall_bot"]
+size = Vector2(1920, 16)
+
+[sub_resource type="RectangleShape2D" id="RS_wall_left"]
+size = Vector2(16, 1080)
+
+[sub_resource type="RectangleShape2D" id="RS_wall_right"]
+size = Vector2(16, 1080)
+
+[sub_resource type="RectangleShape2D" id="RS_safe"]
+size = Vector2(130, 998)
+
+[node name="Main" type="Node2D" unique_id=1321449720 node_paths=PackedStringArray("PlayArea", "SafezoneArea")]
+script = ExtResource("1_gm")
+PlayArea = NodePath("ReferenceRect")
+SafezoneArea = NodePath("SafezoneArea")
+ZombieSpawnRoot = NodePath("ZombieSpawns")
+PlayerSpawnMarker = NodePath("PlayerSpawn")
+
+[node name="HudBg" type="ColorRect" parent="." unique_id=120293701]
+z_index = 40
+offset_right = 1920.0
+offset_bottom = 58.0
+color = Color(0.04, 0.04, 0.04, 0.88)
+metadata/_edit_lock_ = true
+
+[node name="Ground" type="TextureRect" parent="." unique_id=2113364957]
+z_index = -10
+offset_top = 58.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_wkp8b")
+expand_mode = 1
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1407850534]
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="WallTop" type="CollisionShape2D" parent="Walls" unique_id=630788344]
+position = Vector2(960, 62)
+shape = SubResource("RS_wall_top")
+
+[node name="WallBottom" type="CollisionShape2D" parent="Walls" unique_id=1621216538]
+position = Vector2(960, 1072)
+shape = SubResource("RS_wall_bot")
+
+[node name="WallLeft" type="CollisionShape2D" parent="Walls" unique_id=127152196]
+position = Vector2(8, 540)
+shape = SubResource("RS_wall_left")
+
+[node name="WallRight" type="CollisionShape2D" parent="Walls" unique_id=107068723]
+position = Vector2(1912, 540)
+shape = SubResource("RS_wall_right")
+
+[node name="WallVisTop" type="ColorRect" parent="Walls" unique_id=339770771]
+offset_top = 58.0
+offset_right = 1920.0
+offset_bottom = 66.0
+color = Color(0.18, 0.14, 0.1, 1)
+
+[node name="WallVisBottom" type="ColorRect" parent="Walls" unique_id=1372673773]
+offset_top = 1064.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.18, 0.14, 0.1, 1)
+
+[node name="WallVisLeft" type="ColorRect" parent="Walls" unique_id=1122594414]
+offset_top = 58.0
+offset_right = 8.0
+offset_bottom = 1080.0
+color = Color(0.18, 0.14, 0.1, 1)
+
+[node name="WallVisRight" type="ColorRect" parent="Walls" unique_id=1963598487]
+offset_left = 1912.0
+offset_top = 58.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.18, 0.14, 0.1, 1)
+
+[node name="SafezoneBorderLine" type="ColorRect" parent="." unique_id=1436892177]
+z_index = 1
+offset_left = 1788.0
+offset_top = 66.0
+offset_right = 1796.0
+offset_bottom = 1064.0
+color = Color(0.15, 0.95, 0.65, 1)
+
+[node name="SafezoneBorderDash" type="ColorRect" parent="." unique_id=7700002]
+offset_left = 1790.0
+offset_top = 66.0
+offset_right = 1794.0
+offset_bottom = 1064.0
+color = Color(0.15, 0.95, 0.65, 0.5)
+
+[node name="SafezoneArea" type="Area2D" parent="." unique_id=10037176]
+position = Vector2(1790, 66)
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+monitorable = false
+metadata/_edit_lock_ = true
+
+[node name="SafezoneShape" type="CollisionShape2D" parent="SafezoneArea" unique_id=1789920009]
+position = Vector2(67, 499)
+shape = SubResource("RS_safe")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=661265045]
+offset_left = 8.0
+offset_top = 66.0
+offset_right = 1912.0
+offset_bottom = 1064.0
+editor_only = false
+metadata/_edit_lock_ = true
+
+[node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1140481304]
+position = Vector2(235, 328)
+
+[node name="ZombieSpawns" type="Node2D" parent="." unique_id=440241449]
+
+[node name="S1" type="Marker2D" parent="ZombieSpawns" unique_id=1942280599]
+position = Vector2(700, 200)
+
+[node name="S2" type="Marker2D" parent="ZombieSpawns" unique_id=408336585]
+position = Vector2(700, 880)
+
+[node name="S3" type="Marker2D" parent="ZombieSpawns" unique_id=2028180672]
+position = Vector2(1200, 200)
+
+[node name="S4" type="Marker2D" parent="ZombieSpawns" unique_id=538239520]
+position = Vector2(1200, 880)
+
+[node name="S5" type="Marker2D" parent="ZombieSpawns" unique_id=1311175688]
+position = Vector2(950, 540)
+
+[node name="S6" type="Marker2D" parent="ZombieSpawns" unique_id=49564231]
+position = Vector2(808, 565)
+
+[node name="S7" type="Marker2D" parent="ZombieSpawns" unique_id=705884628]
+position = Vector2(1400, 300)
+
+[node name="S8" type="Marker2D" parent="ZombieSpawns" unique_id=677512531]
+position = Vector2(1400, 800)
+
+[node name="Enviroment" type="CanvasGroup" parent="." unique_id=140852711]
+
+[node name="Tree1" parent="Enviroment" unique_id=765936479 instance=ExtResource("4_fos0i")]
+position = Vector2(355, 197)
+
+[node name="Tree6" parent="Enviroment" unique_id=1608753334 instance=ExtResource("5_fos0i")]
+position = Vector2(887, 263)
+
+[node name="Tree7" parent="Enviroment" unique_id=932690682 instance=ExtResource("5_fos0i")]
+position = Vector2(1453, 300)
+
+[node name="Tree9" parent="Enviroment" unique_id=2033352361 instance=ExtResource("5_fos0i")]
+position = Vector2(1309, 560)
+
+[node name="Tree8" parent="Enviroment" unique_id=1136118626 instance=ExtResource("5_fos0i")]
+position = Vector2(1349, 952)
+
+[node name="Tree2" parent="Enviroment" unique_id=896326603 instance=ExtResource("6_3dxm6")]
+position = Vector2(1059, 540)
+
+[node name="Tree3" parent="Enviroment" unique_id=1718691492 instance=ExtResource("6_3dxm6")]
+position = Vector2(808, 758)
+
+[node name="Tree4" parent="Enviroment" unique_id=238029833 instance=ExtResource("4_fos0i")]
+position = Vector2(284, 976)
+
+[node name="Tree5" parent="Enviroment" unique_id=1356400781 instance=ExtResource("4_fos0i")]
+z_index = 1
+position = Vector2(393, 469)
+
+[node name="RockBig" parent="Enviroment" unique_id=202493354 instance=ExtResource("7_lgr22")]
+position = Vector2(556, 654)
+
+[node name="RockBig2" parent="Enviroment" unique_id=687477012 instance=ExtResource("7_lgr22")]
+position = Vector2(652, 300)
+
+[node name="RockBig3" parent="Enviroment" unique_id=740846464 instance=ExtResource("7_lgr22")]
+position = Vector2(1586, 556)
+
+[node name="RockBig5" parent="Enviroment" unique_id=1841001932 instance=ExtResource("7_lgr22")]
+position = Vector2(1553, 115)
+
+[node name="RockBig4" parent="Enviroment" unique_id=276687061 instance=ExtResource("7_lgr22")]
+position = Vector2(1188, 212)
+
+[node name="Bush" parent="Enviroment" unique_id=1593979244 instance=ExtResource("9_03owx")]
+position = Vector2(464, 524)
+
+[node name="Bush4" parent="Enviroment" unique_id=1994802599 instance=ExtResource("9_03owx")]
+position = Vector2(510, 495)
+
+[node name="Bush5" parent="Enviroment" unique_id=1798388567 instance=ExtResource("9_03owx")]
+position = Vector2(547, 474)
+
+[node name="Bush6" parent="Enviroment" unique_id=11961623 instance=ExtResource("9_03owx")]
+position = Vector2(491, 449)
+
+[node name="Bush7" parent="Enviroment" unique_id=1120299258 instance=ExtResource("9_03owx")]
+position = Vector2(510, 407)
+
+[node name="Bush8" parent="Enviroment" unique_id=1603349657 instance=ExtResource("9_03owx")]
+position = Vector2(460, 402)
+
+[node name="Bush2" parent="Enviroment" unique_id=1566921632 instance=ExtResource("9_03owx")]
+position = Vector2(445, 565)
+
+[node name="Bush3" parent="Enviroment" unique_id=2134971605 instance=ExtResource("9_03owx")]
+position = Vector2(501, 552)
+
+[node name="stump" parent="Enviroment" unique_id=273007615 instance=ExtResource("10_wkp8b")]
+position = Vector2(284, 560)
+
+[node name="stump2" parent="Enviroment" unique_id=1368029126 instance=ExtResource("10_wkp8b")]
+position = Vector2(355, 824)
+
+[node name="stump3" parent="Enviroment" unique_id=323395289 instance=ExtResource("10_wkp8b")]
+position = Vector2(1032, 824)
+
+[node name="stump4" parent="Enviroment" unique_id=684342082 instance=ExtResource("10_wkp8b")]
+position = Vector2(850, 605)
+
+[node name="stump5" parent="Enviroment" unique_id=127094170 instance=ExtResource("10_wkp8b")]
+position = Vector2(1381, 797)
+
+[node name="appleTree" parent="Enviroment" unique_id=1327280249 instance=ExtResource("4_fos0i")]
+position = Vector2(619, 901)

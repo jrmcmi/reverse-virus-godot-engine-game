@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c2mn3wenknu0m"]
+
+[ext_resource type="Texture2D" uid="uid://dtqmgjehhqu8q" path="res://PNG/exterior.png" id="1_8lura"]
+
+[sub_resource type="RectangleShape2D" id="RS_tree1"]
+size = Vector2(226, 204)
+
+[node name="house" type="StaticBody2D" unique_id=202493354]
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1068566803]
+z_index = 1
+position = Vector2(16.5, 11.725002)
+scale = Vector2(1.7518797, 1.7186507)
+texture = ExtResource("1_8lura")
+region_enabled = true
+region_rect = Rect2(11.743774, -0.21435547, 133.21603, 126.44234)
+
+[node name="Col" type="CollisionShape2D" parent="." unique_id=9196605]
+position = Vector2(18, 20)
+shape = SubResource("RS_tree1")

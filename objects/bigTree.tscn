@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bqubsjrm4myqp"]
+
+[ext_resource type="Texture2D" uid="uid://cbr5pxpa2t1oc" path="res://PNG/Trees_animation.png" id="1_xtamk"]
+
+[node name="bigTree" type="StaticBody2D" unique_id=1608753334]
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=226909375]
+z_index = 1
+position = Vector2(8.250001, 14.000001)
+scale = Vector2(1.2037038, 1.3783784)
+texture = ExtResource("1_xtamk")
+region_enabled = true
+region_rect = Rect2(358.80154, 564.53955, 81.848755, 74.51062)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1718430669]
+position = Vector2(11, 9)
+polygon = PackedVector2Array(-18, -45, -9, -46, -4, -46, 0, -44, 3, -42, 9, -45, 13, -42, 14, -38, 19, -38, 23, -35, 22, -30, 27, -25, 30, -20, 35, -19, 38, -14, 37, -8, 40, 2, 39, 8, 36, 11, 32, 16, 33, 23, 26, 27, 27, 32, 23, 38, 17, 39, 10, 39, 5, 46, 5, 50, -9, 49, -18, 49, -24, 47, -21, 39, -21, 33, -27, 32, -34, 32, -39, 25, -43, 19, -44, 15, -37, 11, -41, 5, -45, -4, -48, -10, -45, -18, -43, -23, -36, -25, -32, -28, -34, -37, -29, -40, -22, -41)

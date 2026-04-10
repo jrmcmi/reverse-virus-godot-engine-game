@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bqrcnve4804xn"]
+
+[ext_resource type="Texture2D" uid="uid://cbr5pxpa2t1oc" path="res://PNG/Trees_animation.png" id="1_7m00k"]
+
+[node name="appleTree" type="StaticBody2D" unique_id=202493354]
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1068566803]
+z_index = 1
+position = Vector2(15.25, 19.000002)
+scale = Vector2(1.4178082, 1.4871795)
+texture = ExtResource("1_7m00k")
+region_enabled = true
+region_rect = Rect2(187.58376, 321.5096, 73.241684, 78.37326)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=616341393]
+position = Vector2(18, 12)
+polygon = PackedVector2Array(-25, -42, -18, -40, -9, -43, -2, -41, 2, -41, 11, -46, 20, -46, 28, -44, 38, -38, 36, -27, 29, -18, 30, -10, 35, 0, 42, 9, 37, 17, 35, 27, 26, 36, 22, 40, 17, 40, 17, 39, 8, 44, 10, 47, 6, 49, -1, 51, -7, 51, -12, 52, -18, 50, -20, 46, -18, 37, -15, 35, -14, 29, -20, 26, -25, 29, -36, 25, -44, 17, -50, 12, -47, 3, -44, -2, -42, -11, -38, -16, -37, -21, -35, -25, -32, -30, -28, -34, -27, -41)

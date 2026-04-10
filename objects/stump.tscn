@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dkoryoi3wh7b1"]
+
+[ext_resource type="Texture2D" uid="uid://dtqmgjehhqu8q" path="res://PNG/exterior.png" id="1_8lura"]
+
+[node name="stump" type="StaticBody2D" unique_id=202493354]
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1068566803]
+z_index = 1
+position = Vector2(17.079548, 18.594227)
+scale = Vector2(1.2306577, 1.1145605)
+texture = ExtResource("1_8lura")
+region_enabled = true
+region_rect = Rect2(165.02649, 634.23596, 39, 27.71051)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1517618957]
+position = Vector2(17, 17)
+polygon = PackedVector2Array(-4, -13, 3, -13, 5, -12, 8, -11, 10, -10, 12, -8, 13, -7, 14, -4, 16, -3, 18, -2, 17, 1, 17, 3, 18, 6, 19, 8, 15, 10, 13, 11, 13, 13, 10, 14, 9, 11, 7, 9, 5, 12, 3, 13, 0, 12, 0, 15, -2, 14, -4, 12, -7, 12, -9, 10, -9, 8, -11, 9, -14, 10, -17, 10, -15, 6, -13, 4, -15, 1, -17, 1, -19, 1, -18, -3, -16, -3, -14, -5, -12, -8, -12, -9, -7, -11, -7, -12)

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://0j4alaw1mw7q"]
+
+[ext_resource type="Texture2D" uid="uid://dtqmgjehhqu8q" path="res://PNG/exterior.png" id="1_chucr"]
+
+[node name="bush" type="StaticBody2D" unique_id=202493354]
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1068566803]
+z_index = 1
+position = Vector2(17.079548, 18.594227)
+scale = Vector2(1.2306577, 1.1145605)
+texture = ExtResource("1_chucr")
+region_enabled = true
+region_rect = Rect2(0.43379402, 611.2654, 47.036285, 42.40973)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=2042122779]
+position = Vector2(16, 14)
+polygon = PackedVector2Array(-7, -19, -3, -19, 2, -19, 7, -19, 11, -17, 12, -17, 14, -15, 19, -12, 23, -10, 23, -7, 23, -4, 26, 0, 26, 3, 30, 8, 25, 13, 26, 17, 18, 19, 15, 17, 12, 22, 7, 23, 2, 22, -4, 25, -8, 26, -10, 22, -14, 19, -15, 17, -21, 18, -25, 15, -23, 10, -19, 9, -23, 6, -24, 2, -20, 0, -17, 0, -20, -3, -22, -5, -18, -7, -16, -8, -15, -11, -17, -14, -13, -15, -11, -15, -7, -18, -7, -20)

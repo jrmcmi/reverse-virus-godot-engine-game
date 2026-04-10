@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bfn310mobb2yn"]
+
+[ext_resource type="Texture2D" uid="uid://dtqmgjehhqu8q" path="res://PNG/exterior.png" id="1_8t4sf"]
+
+[node name="RockBig" type="StaticBody2D" unique_id=202493354]
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1068566803]
+z_index = 1
+position = Vector2(40.5, 45.75)
+scale = Vector2(2.2272727, 2.4076924)
+texture = ExtResource("1_8t4sf")
+region_enabled = true
+region_rect = Rect2(-0.6139984, 655.44604, 66.69905, 65.15686)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=2001371968]
+position = Vector2(30, 29)
+polygon = PackedVector2Array(-5, -60, 11, -57, 19, -53, 29, -51, 32, -45, 39, -38, 45, -37, 48, -29, 51, -15, 51, -3, 52, 11, 52, 25, 50, 33, 45, 31, 44, 41, 43, 51, 35, 53, 32, 59, 31, 59, 25, 72, 18, 78, 12, 79, 4, 74, -5, 69, -12, 66, -21, 70, -31, 64, -37, 55, -39, 48, -45, 45, -43, 36, -43, 27, -49, 17, -53, 8, -53, -2, -51, -12, -50, -22, -44, -30, -36, -38, -29, -47, -21, -51)
