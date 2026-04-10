@@ -1,15 +1,6 @@
 using Godot;
 using System.Collections.Generic;
 
-/// <summary>
-/// Trap.cs — Slow-field dropped by Trapper.
-///
-/// CHANGES:
-///   • Visual replaced with a Sprite2D using ground_grass_details.png
-///     tinted red/orange as a placeholder until a real trap sprite is added.
-///     To replace: swap out the texture on _sprite.
-///   • All slow logic unchanged and confirmed working.
-/// </summary>
 public partial class Trap : Area2D
 {
     [Export] public float SlowFactor = 0.45f;
