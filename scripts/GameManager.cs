@@ -1,20 +1,6 @@
 using Godot;
 using System.Collections.Generic;
 
-/// <summary>
-/// GameManager.cs — Overhauled HUD + fixed R-restart on game over.
-///
-/// FIX (game over restart): The scene was paused AND _Input was blocked
-/// by ProcessMode. Changed _Input to use _UnhandledInput and unpaused
-/// before reload. Also R now works via direct GetTree().Paused = false first.
-///
-/// HUD OVERHAUL:
-///   • Timer centred at top
-///   • Stats (Zombies, Escorting, Saved) at top-LEFT
-///   • Control guide at top-RIGHT (smaller text)
-///   • Dash/Boost status below centre timer
-///   • All text colours/sizes exported for easy tuning
-/// </summary>
 public partial class GameManager : Node2D
 {
     public static GameManager Instance { get; private set; }
