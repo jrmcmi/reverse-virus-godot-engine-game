@@ -1,5 +1,16 @@
 using Godot;
 
+/// <summary>
+/// Powerups.cs
+///
+/// CHANGES:
+///   • Each powerup now shows a Sprite2D using ground_grass_details.png
+///     tinted per powerup type as a placeholder until real sprites are added.
+///     To replace: change the texture on the Sprite2D child of each powerup's
+///     scene instance, or override OnBuildSprite() in a subclass.
+///   • Powerup-pickup sound fired via AudioManager on every pickup.
+///   • Pulse animation kept on the Node2D parent (doesn't affect sprite scaling).
+/// </summary>
 public abstract partial class PowerupBase : Area2D
 {   
     protected abstract Color TintColor    { get; }  // Modulate tint for placeholder sprite
@@ -11,12 +22,12 @@ public abstract partial class PowerupBase : Area2D
     public override void _Ready()
     {
         // ── Sprite: ground_grass_details.png tinted per powerup type ──────
-        var tex = GD.Load<Texture2D>("res://PNG/powerups.png");
+        var tex = GD.Load<Texture2D>("res://PNG/ac-logo.png");
         _sprite = new Sprite2D
         {
             Texture  = tex,
             Modulate = TintColor,
-            Scale    = new Vector2(0.50f, 0.50f),  // Scale to fit ~30px radius
+            Scale    = new Vector2(0.02f, 0.02f),  // Scale to fit ~30px radius
             ZIndex   = 5
         };
         AddChild(_sprite);

@@ -1,5 +1,29 @@
 using Godot;
 
+// ═════════════════════════════════════════════════════════════════════════════
+// ZombieTypes.cs — Sprinter, Pusher, Trapper
+//
+// All three use the same ZombieWalkFrames.tres sprite sheet (loaded in ZombieBase).
+// Each type tints _sprite.Modulate in BuildVisual() to distinguish visually:
+//   Sprinter → red-orange tint
+//   Pusher   → blue tint
+//   Trapper  → green tint
+//
+// BUGS FIXED vs previous version:
+//   • Sprinter chase logic restored (detect radius → chase player / humans)
+//   • All speeds were 20 → corrected to playable values
+//   • Pusher now deals TakeDamage on push (not just ApplyKnockback)
+//   • Trapper ChaseChance was 20 (always chasing) → 0.25 (25%)
+//   • UpdateZombieAnim() called at end of every MoveLogic() path
+// ═════════════════════════════════════════════════════════════════════════════
+
+
+// ── Sprinter ──────────────────────────────────────────────────────────────
+// Red tint. Fastest type.
+// Solo mode: wanders; chases player when inside DetectRadius.
+// Protect mode: chases nearest human regardless of distance.
+// ─────────────────────────────────────────────────────────────────────────
+
 public partial class Sprinter : ZombieBase
 {
     [Export] public float ChaseSpeed   = 30f;

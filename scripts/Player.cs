@@ -5,7 +5,7 @@ public partial class Player : CharacterBody2D
 {
     [Export] public SpriteFrames WalkFrames;
     [Export] public SpriteFrames AttackFrames;
-    [Export] public float BaseSpeed         = 50f;
+    [Export] public float BaseSpeed         = 80f;
     [Export] public float DashDistance      = 50f;
     [Export] public float DashCooldown      = 10f;
     [Export] public float KnockbackFriction = 9f;

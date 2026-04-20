@@ -1,0 +1,14 @@
+res://objects/appleTree.tscn::95dc9ff3eccdff81b68d95565c2ebf99::1775802669::res://.godot/exported/133200997/export-e803cafafe61030e25bd41bd5d42bd68-appleTree.scn
+res://objects/bigTree.tscn::339ecc1dad0b4de708141eb40e955662::1775802641::res://.godot/exported/133200997/export-ff3b11db3912997ebe8f6b20ec624922-bigTree.scn
+res://objects/bush.tscn::6843bdc99156189f44cce241733d4184::1775802617::res://.godot/exported/133200997/export-973646fa9e5301128c1c78e0c393c661-bush.scn
+res://objects/house.tscn::82fa04ea6f557f5284bf111fa9d0fec8::1775796685::res://.godot/exported/133200997/export-8b1ad8b67f53e10d772c7747dbd290bd-house.scn
+res://objects/regularTree.tscn::f5cc08ad4a5c6071c4405685b89e4416::1775802580::res://.godot/exported/133200997/export-3d3962d23da68fcd98737534627af6ed-regularTree.scn
+res://objects/rocks.tscn::e7fcf65f796c589db571465d864fe8f4::1775802474::res://.godot/exported/133200997/export-0ecdc0554c283f108a8325fb4ecc111f-rocks.scn
+res://objects/stump.tscn::f4397bda1a19c806ed546f1f94992fc4::1775802550::res://.godot/exported/133200997/export-5bbfb1b29e0ee0777de0071b1fa43872-stump.scn
+res://resources/AttackFrames.tres::6267b8b212c885a12051b143dfda6b75::1775798774::res://.godot/exported/133200997/export-a03799d1d1976f7a4cd58f9e98d63c9d-AttackFrames.res
+res://resources/HumanWalkFrames.tres::0eb2444033fe51ec8ccfea7bb108809e::1775793553::res://.godot/exported/133200997/export-dc2e8bee03c0e3b4d608dfab5be845a9-HumanWalkFrames.res
+res://resources/WalkFrames.tres::191ed0c2ea5303379e23444ae434d3bc::1775793553::res://.godot/exported/133200997/export-452037da20de31ff9bb296ba48290836-WalkFrames.res
+res://resources/ZombieWalkFrames.tres::57743720a7aef870e8b0d535ccd2e84a::1775793553::res://.godot/exported/133200997/export-86b38af4165ed5dc3904ab8315cc14b1-ZombieWalkFrames.res
+res://Main.tscn::9c9bbaaa31bcdcdc741d64b43eec2474::1776218513::res://.godot/exported/133200997/export-bcb0d2eb5949c52b6a65bfe9de3e985b-Main.scn
+res://MainMenu.tscn::37dab067cffcb1d6bca9ceffc0849803::1776218293::res://.godot/exported/133200997/export-e20540a8a37e906f11cb1dae59cc6ed4-MainMenu.scn
+res://objects/school.tscn::b14aa1bf37663d204edd3a3a8d7e9d2f::1776217404::res://.godot/exported/133200997/export-eeb70f12851c87e6d4c32083618b6393-school.scn

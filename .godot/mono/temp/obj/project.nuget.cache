@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "SX31m8FbpXU=",
+  "success": true,
+  "projectFilePath": "/home/mai/Documents/Code/godot/reverse-virus/reverse-virus-v2.csproj",
+  "expectedPackageFiles": [
+    "/home/mai/.nuget/packages/godot.sourcegenerators/4.6.2/godot.sourcegenerators.4.6.2.nupkg.sha512",
+    "/home/mai/.nuget/packages/godotsharp/4.6.2/godotsharp.4.6.2.nupkg.sha512",
+    "/home/mai/.nuget/packages/godotsharpeditor/4.6.2/godotsharpeditor.4.6.2.nupkg.sha512",
+    "/home/mai/.nuget/packages/microsoft.netcore.app.ref/8.0.25/microsoft.netcore.app.ref.8.0.25.nupkg.sha512",
+    "/home/mai/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.25/microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}

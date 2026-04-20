@@ -1,6 +1,10 @@
 using Godot;
 using System.Collections.Generic;
 
+/// <summary>
+/// Human.cs — Real HP system: zombie contact deals damage, only converts at 0 HP.
+/// HP bar is teal/cyan. Humans regen HP slowly over time.
+/// </summary>
 public partial class Human : CharacterBody2D
 {
     [Export] public float MoveSpeed     = 50f;

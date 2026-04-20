@@ -1,6 +1,16 @@
 using Godot;
 using System.Collections.Generic;
 
+/// <summary>
+/// ZombieBase.cs
+///
+/// CHANGES:
+///   • HP bar colour changed from violet → red (full) → orange → dark red
+///   • GetCured() calls GameManager.OnZombieCured() for converted-human sound
+///   • RegisterZombie() now also registers zombie audio (handled in GameManager)
+///   • Tree z-index: zombies now use ZIndex = 3 so they always render below
+///     environment objects (trees use z_index 2+ in scene)
+/// </summary>
 public abstract partial class ZombieBase : CharacterBody2D
 {
     public float MaxHP          = 100f;

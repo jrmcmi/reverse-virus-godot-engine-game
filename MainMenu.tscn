@@ -1,19 +1,23 @@
 [gd_scene format=3 uid="uid://6pm5nrwirb5i"]
 
 [ext_resource type="Script" uid="uid://cfuqedi5510uq" path="res://scripts/MainMenuScript.cs" id="1_menu"]
+[ext_resource type="Texture2D" uid="uid://cqfsgah6os8nh" path="res://PNG/main-menu.png" id="2_eiy7p"]
 
 [node name="MainMenu" type="Control" unique_id=1904915820]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_menu")
 
-[node name="Background" type="ColorRect" parent="." unique_id=1346637787]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=981786315]
 layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color(0.04, 0.1, 0.04, 1)
+offset_right = 1937.0
+offset_bottom = 1100.0
+texture = ExtResource("2_eiy7p")
+expand_mode = 1
 
 [node name="TopBar" type="ColorRect" parent="." unique_id=1984521923]
 layout_mode = 0
@@ -30,41 +34,24 @@ offset_top = -6.0
 color = Color(0.18, 0.72, 0.35, 0.85)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=2144416136]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 399.0
+offset_bottom = 399.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBox" type="VBoxContainer" parent="CenterContainer" unique_id=1046542078]
 layout_mode = 2
 theme_override_constants/separation = 28
 alignment = 1
 
-[node name="TitleLabel" type="Label" parent="CenterContainer/VBox" unique_id=1838168955]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.18, 0.9, 0.42, 1)
-theme_override_font_sizes/font_size = 64
-text = "Anti-Virus Virus"
-horizontal_alignment = 1
-
-[node name="SubLabel" type="Label" parent="CenterContainer/VBox" unique_id=1696570892]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.6, 0.85, 0.65, 0.85)
-theme_override_font_sizes/font_size = 18
-text = "Cure the zombies. Escort the humans. Save them all."
-horizontal_alignment = 1
-
-[node name="SubLabel2" type="Label" parent="CenterContainer/VBox" unique_id=1727354106]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.6, 0.85, 0.65, 0.85)
-theme_override_font_sizes/font_size = 12
-text = "Kill zombies and they will turn into human and 
-guide them towards the safezone"
-horizontal_alignment = 1
-
 [node name="PlayButton" type="Button" parent="CenterContainer/VBox" unique_id=1146355866]
 custom_minimum_size = Vector2(280, 68)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.18039216, 0.8980392, 0.41960785, 1)
+theme_override_colors/font_color = Color(0.39626023, 0.87772536, 0.40311956, 1)
 theme_override_font_sizes/font_size = 28
 text = "Play Game"
 
