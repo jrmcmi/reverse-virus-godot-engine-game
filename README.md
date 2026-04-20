@@ -1,6 +1,4 @@
-# reverse-virus-godot-engine-game
-
-# 🦠 Reverse Virus — A Godot 4 Tower Defense / Escort Game
+# Anti Virus Virus Game — A Godot Attack & Escort Game
 
 > **Kill the zombies. Cure the infected. Guide the humans to safety.**
 
@@ -48,7 +46,7 @@ The more humans you successfully guide to the school, the better your score. Sur
 4. **Human survivors must be guided** toward the School in the upper-center of the map — this is the safe zone.
 5. **The school area** acts as the win condition zone; once a human enters it, they are safely saved.
 6. New waves of zombies continue to spawn, increasing in difficulty.
-7. The game ends when the player is overwhelmed or all humans are lost.
+7. The game ends when the player is overwhelmed or the 5 minute mark is finished.
 
 ---
 
@@ -87,7 +85,8 @@ The more humans you successfully guide to the school, the better your score. Sur
 |---|---|
 | Move | `W A S D` or Arrow Keys |
 | Attack | `Left Click` or assigned attack key |
-| Pause / Menu | `Escape` |
+| Dash | `Space` |
+| Restart | `R` |
 
 > ⚠️ Controls may vary — check the in-game settings or `scripts/` for input bindings.
 
@@ -252,12 +251,10 @@ To export a standalone executable:
 
 | Role | Name | GitHub |
 |---|---|---|
-| 👑 **Project Leader** | cimafrancajr | [@jrmcmi](https://github.com/jrmcmi) |
-| 🛠️ Member | Placeholder Member 1 | — |
-| 🛠️ Member | Placeholder Member 2 | — |
-| 🛠️ Member | Placeholder Member 3 | — |
-
-> 📝 *Replace placeholder names and GitHub handles with your actual team members.*
+| **Project Leader** | Cimafranca, Jearim Raglen | [@jrmcmi](https://github.com/jrmcmi) |
+| Member | Avila, Fresius Jane J. | — |
+| Member | Canlas, Hailie Jade U. | — |
+| Member | Baldemoro, Jeremiah    | — |
 
 ---
 
