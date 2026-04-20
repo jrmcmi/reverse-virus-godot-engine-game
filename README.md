@@ -87,6 +87,7 @@ The more humans you successfully guide to the school, the better your score. Sur
 | Attack | `Left Click` or assigned attack key |
 | Dash | `Space` |
 | Restart | `R` |
+| Fullescreen | `F` |
 
 > ⚠️ Controls may vary — check the in-game settings or `scripts/` for input bindings.
 
